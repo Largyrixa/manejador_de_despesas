@@ -1,0 +1,38 @@
+# Manejador de despesas
+
+@ O que é ?
+{
+  - Aplicação em C++ para o manejamento de despesas mensais;
+  - Utiliza uma API criada para fazer a comunicação com um banco de dados;
+  - Banco de dados? (nao sei SQL);
+}
+
+@ O que precisa ser feito?
+{
+  |API em C++|
+  {
+    - Pesquisar sobre como fazer uma API;
+    - Pesquisar sobre APIs;
+  }
+
+  |Interface gráfica|
+  {
+    - Acho que é um bom desafio fazer em C++;
+    !Existe uma biblioteca boa pra interface => pesquisar sobre
+  }
+
+  |Banco de dados|
+  {
+    - Pesquisar sobre banco de dados;
+    - Papai vai fazer, mas eu preciso de saber sobre a comunicação para fazer a API;
+  }
+}
+
+@ Funcionalidades
+{
+  |Registro de entradas e despesas|
+  {
+  }
+
+  ||
+}
