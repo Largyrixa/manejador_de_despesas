@@ -1,0 +1,50 @@
+# Plano de ação
+
+@ Definição e Pesquisa Detalhada (Fundação)
+  *Aprofundar Pesquisa em APIs em C++:
+    |O que é uma API neste contexto?|
+    - Para este projeto, a "API" provavelmente se refere a uma camada de abstração da aplicação em C++ que lida com a lógica e a comunicação com o BD.
+    |Como estruturar essa "API" interna?|
+    - Pensar em classes e funções que encapsulem operações como "adicionar despesa", "listar despesas", "calcular saldo", etc.
+
+  *Escolher como fazer a interface gráfica
+    |Qt|
+    - Multiplataforma
+    - Bem documentada
+    - Mais difícil de aprender
+    |wxWidgets|
+    - Multiplataforma
+    - Parece mais natural para cada OS
+    |FLTK|
+    - Leve e rápida
+    - Mais simples
+    !Para web, o kit html, css e js serve bem
+
+  *Escolher e Perquisar Sobre BD e Conectividade
+    !Parte do papai, pelo que eu sei é PostgreSQL
+    |Biblioteca de Conexão C++:|
+      - Para SQLite: SQLiteC++ | API C do SQLite
+      - Para MySQL: MySQL Connector/C++
+      - Para PostgreSQL: lipqxx <-
+    
+@ Estrutura Básica e Lógica de Negócios (Core)
+  *Definição da Estrurura de Dados:
+    |Quais informações serão armazenadas?|
+
+    |Como essas informações serão representadas em C++ (classes ou structs)?|
+
+    |Como isso será mapeado para as tabelas do banco de dados?|
+
+  *Desenvolvimento da API interna (Lógica de Negócios):
+    |Crie classes e funções em C++ para:|
+      - Conectar/desconectar do BD
+      - Criar tabelas do BD se não existem
+        e.g: adicionarDespesa(data, descricao, valor, tipo, ...)
+      - Testar essa camada exaustivamente |sem interface gráfica|
+  
+  * Integração com o BD:
+    - Implementar a lógica nas funções da API interna para realizar as operações CRUD (Create, Read, Update, Delete) no banco de dados escolhido.
+
+@ Desenvolvimento da Interface Gráfica (GUI)
+(...)
+

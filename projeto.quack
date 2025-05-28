@@ -13,12 +13,24 @@
   {
     - Pesquisar sobre como fazer uma API;
     - Pesquisar sobre APIs;
+
+    * Tipos de dados:
+      |INCOME|
+        - Entrada de dinheiro
+      |OUTCOME|
+        - Saída de dinheiro
+        - Almoço
+        - Lanche
+        - Transporte
+        - Supermercado
+        - Passeios
+        - Pessoal
+        - Outras compras
   }
 
   |Interface gráfica|
   {
-    - Acho que é um bom desafio fazer em C++;
-    !Existe uma biblioteca boa pra interface => pesquisar sobre
+    - Decidir se fazer web ou em C++ (talvez web seja melhor);
   }
 
   |Banco de dados|
@@ -33,6 +45,4 @@
   |Registro de entradas e despesas|
   {
   }
-
-  ||
 }
