@@ -1,0 +1,41 @@
+services:
+  db:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - db
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d postgres" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin4
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: teste@teste.org
+      PGADMIN_DEFAULT_PASSWORD: teste
+    volumes:
+      - ./model:/home/pgadmin/model
+      - pgadmin-data:/var/lib/pgadmin
+    networks:
+      - db
+
+networks:
+  db:
+    driver: bridge
+
+volumes:
+  db:
+  pgadmin-data:
